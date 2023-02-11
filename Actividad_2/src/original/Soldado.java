@@ -1,4 +1,4 @@
-package requerimiento1;
+package original;
 
 public class Soldado {
 	private boolean estaMuerto;

@@ -1,4 +1,4 @@
-package requerimiento2;
+package original;
 
 public class Jugador {
 	 private int dorsal;
