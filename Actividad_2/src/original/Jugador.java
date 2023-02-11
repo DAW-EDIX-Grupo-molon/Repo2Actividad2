@@ -12,6 +12,7 @@ public class Jugador {
 //Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación. Aquí no se han creado porque no aportan nada
 
 
+     
 
      public void ponerDorsal(int dorsal) {
 
