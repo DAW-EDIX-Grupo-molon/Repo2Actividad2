@@ -1,5 +1,6 @@
 package ivan;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
@@ -85,41 +86,25 @@ class TestJugador {
 		 * Con dos tarjetas amarillas el jugador esta expulsado
 		 */
 		jug1.setNumeroTarjetasAmarillas(2);
-		boolean valorEsperado1 = true;
-		boolean valorObtenido1 = jug1.estaExpulsado();
-		assertEquals(valorEsperado1, valorObtenido1);
+		assertTrue(jug1.estaExpulsado());
+		
+		/*
+		 * Con dos tarjetas amarillas el jugador no esta expulsado
+		 */
+		jug1.setNumeroTarjetasAmarillas(1);
+		assertFalse(jug1.estaExpulsado());
 		
 		/*
 		 * Con una tarjeta roja el jugador esta expulsado
 		 */
 		jug1.setNumeroTarjetasRojas(1);
-		boolean valorEsperado2 = true;
-		boolean valorObtenido2 = jug1.estaExpulsado();
-		assertEquals(valorEsperado2, valorObtenido2);
-		
-		/*
-		 * Con una tarjeta amarilla el jugador no esta expulsado y devuelve false
-		 */
-		jug1.setNumeroTarjetasAmarillas(1);
-		boolean valorEsperado3 = false;
-		boolean valorObtenido3 = jug1.estaExpulsado();
-		assertEquals(valorEsperado3, valorObtenido3);
+		assertTrue(jug1.estaExpulsado());
 		
 		/*
 		 * Con cero tarjetas rojas el jugador no esta expulsado
 		 */
-		jug1.setNumeroTarjetasRojas(0);
-		boolean valorEsperado4 = false;
-		boolean valorObtenido4 = jug1.estaExpulsado();
-		assertEquals(valorEsperado4, valorObtenido4);
-		
-		/*
-		 * Con cero tarjetas rojas el jugador no esta expulsado
-		 */
-		jug1.setNumeroTarjetasRojas(4);
-		boolean valorEsperado5 = false;
-		boolean valorObtenido5 = jug1.estaExpulsado();
-		assertEquals(valorEsperado5, valorObtenido5);
+		jug1.setNumeroTarjetasAmarillas(0);
+		assertTrue(jug1.estaExpulsado());
 		
 	}//END testSetDorsal
 	
