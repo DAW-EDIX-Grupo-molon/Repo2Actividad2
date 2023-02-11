@@ -4,7 +4,7 @@ package cristina;
  * 
  * Hace referencia a la entidad Jugador.
  * 
- * @author Cristina
+ * @author Grupo_molón
  * 
  * @version 1.0v
  *
@@ -93,7 +93,7 @@ public class Jugador {
 	 * en la propiedad numeroTarjetasAmarillas o el valor 1 en la propiedad 
 	 * númeroTarjetasRojas, significará que está expulsado.
 	 * 
-	 * @return devuelve verdadero si el jugador ha sido expulsado, es decir si el jugador tiene el valor 2 
+	 * @return devuelve verdadero si el jugador ha sido expulsado, es decir, si el jugador tiene el valor 2 
 	 * tarjetas amarillas y/o una roja. En caso contrario devuelve falso
 	 * en el caso de que el jugador no haya sido expulsado.
 	 * 
