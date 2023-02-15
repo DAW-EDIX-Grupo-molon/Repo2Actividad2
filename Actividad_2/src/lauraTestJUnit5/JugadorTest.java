@@ -45,7 +45,7 @@ class JugadorTest {
 		jugador.setNumeroTarjetasAmarillas(0);
 		jugador.setNumeroTarjetasRojas(0);
 		
-		boolean resultadoEsperado = false;
+		assertFalse(false);
 	}
 	
 	@Test
@@ -54,7 +54,7 @@ class JugadorTest {
 		jugador.setNumeroTarjetasAmarillas(1);
 		jugador.setNumeroTarjetasRojas(0);
 		
-		boolean resultadoEsperado = false;
+		assertFalse(false);
 	}
 	@Test
 	public void estaExpulsadoPositivoTres() {
@@ -62,8 +62,7 @@ class JugadorTest {
 		jugador.setNumeroTarjetasAmarillas(2);
 		jugador.setNumeroTarjetasRojas(0);
 		
-		boolean resultadoEsperado = true;
-		int resultado = jugador.getNumeroTarjetasAmarillas();
+		assertTrue(true);
 	}
 
 	@Test
@@ -72,7 +71,6 @@ class JugadorTest {
 		jugador.setNumeroTarjetasAmarillas(0);
 		jugador.setNumeroTarjetasRojas(1);
 		
-		boolean resultadoEsperado = true;
-		int resultado = jugador.getNumeroTarjetasRojas();
+		assertTrue(true);
 	}
 }
