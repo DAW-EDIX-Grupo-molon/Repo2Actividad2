@@ -2,7 +2,7 @@ package cristina;
 
 /**
  * 
- * Hace referencia a la entidad Soldado.
+ * Hace referencia a la entidad Soldado con las propiedas numero de balas y puede estar muerto.
  * 
  * @author Grupo_molón
  * 

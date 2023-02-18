@@ -2,7 +2,8 @@ package cristina;
 
 /**
  * 
- * Hace referencia a la entidad Jugador.
+ * Hace referencia a la entidad Jugador, que tiene de propiedad un valor de dorsal,
+ * números de tarjeta roja y amarillas, y a parte puede estar expulsado.
  * 
  * @author Grupo_molón
  * 

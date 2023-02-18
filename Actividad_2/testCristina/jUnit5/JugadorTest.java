@@ -8,34 +8,46 @@ import cristina.Jugador;
 
 class JugadorTest {
 
+	/**
+	 * Comprobamos el funcionamiento del método poner dorsal con un valor de dorsal
+	 * entre 1 y 30
+	 */
 	@Test
 	void testPonerDorsalCorrecto() {
 		System.out.println("Test PonerDorsal Correcto");
 		// GIVEN -- Dado...
 		Jugador jugador = new Jugador();
 		int dorsal = 5;
-		
+
 		// WHEN -- Cuando... cambio de estado
 		jugador.ponerDorsal(dorsal);
-		
+
 		// THEN -- Entonces ...
 		assertEquals(dorsal, jugador.getDorsal());
 	}
-	
+
+	/**
+	 * Comprobamos el funcionamiento del método poner dorsal con un valor de dorsal
+	 * no comprendido entre 1 y 30
+	 */
 	@Test
 	void testPonerDorsalIncorrecto() {
 		System.out.println("Test PonerDorsal Incorrecto");
 		// GIVEN -- Dado...
 		Jugador jugador = new Jugador();
 		int dorsal = 31;
-		
+
 		// WHEN -- Cuando... cambio de estado
 		jugador.ponerDorsal(dorsal);
-		
+
 		// THEN -- Entonces ...
 		assertEquals(-1, jugador.getDorsal());
 	}
-	
+
+	/**
+	 * Comprobamos el funcionamiento del método está expulsado cuando el jugador
+	 * tiene dos tarjetas amarillas.
+	 */
 	@Test
 	void testConTarjetasAmarillas() {
 		System.out.println("Test 2 tarjetas amarillas");
@@ -44,11 +56,15 @@ class JugadorTest {
 
 		// WHEN -- Cuando... cambio de estado
 		jugador.setNumeroTarjetasAmarillas(2);
-		
+
 		// THEN -- Entonces ...
 		assertTrue(jugador.estaExpulsado());
 	}
-	
+
+	/**
+	 * Comprobamos el funcionamiento del método está expulsado cuando el jugador
+	 * tiene una tarjeta roja.
+	 */
 	@Test
 	void testConTarjetaRoja() {
 		System.out.println("Test 1 tarjetas roja");
@@ -57,11 +73,15 @@ class JugadorTest {
 
 		// WHEN -- Cuando... cambio de estado
 		jugador.setNumeroTarjetasRojas(1);
-		
+
 		// THEN -- Entonces ...
 		assertTrue(jugador.estaExpulsado());
 	}
-	
+
+	/**
+	 * Comprobamos el funcionamiento del método está expulsado cuando el jugador no
+	 * tiene una tarjeta roja, ni dos amarillas.
+	 */
 	@Test
 	void testSinTarjetas() {
 		System.out.println("Test 1 tarjetas roja");
@@ -71,7 +91,7 @@ class JugadorTest {
 		// WHEN -- Cuando... cambio de estado
 		jugador.setNumeroTarjetasRojas(0);
 		jugador.setNumeroTarjetasAmarillas(1);
-		
+
 		// THEN -- Entonces ...
 		assertFalse(jugador.estaExpulsado());
 	}
