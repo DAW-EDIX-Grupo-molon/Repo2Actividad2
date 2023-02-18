@@ -1,12 +1,10 @@
-package LuxmyTest;
+package TestSoldado;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Luxmy.Soldado;
-
-import Luxmy.Soldado;
+import solucion.Soldado;
 
 class SoldadoTest {
 

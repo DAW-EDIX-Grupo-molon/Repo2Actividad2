@@ -1,11 +1,11 @@
-package LuxmyTest;
+package TestJugador;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Luxmy.Jugador;
-import Luxmy.Soldado;
+import solucion.Jugador;
+import solucion.Soldado;
 
 class JugadorTest {
 	

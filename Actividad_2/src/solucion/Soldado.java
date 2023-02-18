@@ -1,4 +1,4 @@
-package Luxmy;
+package solucion;
 
 /**
  * Clase que representa a un soldado con dos atributos: estarMuerto, numeroBalas
